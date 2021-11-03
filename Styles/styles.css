@@ -1,3 +1,5 @@
+/* Resets and custom variables*/
+
 *,
 *::after,
 *::before {
@@ -13,9 +15,22 @@
     --Light-Grayish-Blue: hsl(210, 46%, 95%);
 }
 
+
+/* Global styles and text styling*/
 html {
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
+}
+
+
+h2 {
+    color:var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+}
+
+p {
+    color: var(--Grayish-Blue);
+    font-weight: 500;
 }
 
 body {
@@ -29,15 +44,8 @@ body {
     position: relative;
 }
 
-h2 {
-    color:var(--Very-Dark-Grayish-Blue);
-    font-weight: 700;
-}
+/* Card styling */
 
-p {
-    color: var(--Grayish-Blue);
-    font-weight: 500;
-}
 
 .card-container {
     background-color: white;
@@ -46,6 +54,8 @@ p {
     width: 50%;
     border-radius: 20px 20px 20px 20px;
 }
+
+/* Card main content styling */
 
 .card-header-picture {
     width: 100%;
@@ -63,6 +73,8 @@ p {
     padding-top: 1.2em;
 }
 
+/* User styling */
+
 .card-user {
     display: flex;
     flex-direction: row;
@@ -77,42 +89,44 @@ p {
     border-radius: 50%;
 }
 
-#card-user-share {
+/* Share button styling */
+
+.card-user-share {
     object-fit: fill;
-    height: 1.2em;
-    border-radius: 40%;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    border: 2px solid var(--Light-Grayish-Blue);
     background-color: var(--Light-Grayish-Blue);
     fill:var(--Very-Dark-Grayish-Blue);
+    box-shadow:  none;
 }
 
-#card-user-share:hover {
+.card-user-share:hover {
     background-color: var(--Very-Dark-Grayish-Blue);
+    border-color: var(--Very-Dark-Grayish-Blue);
     fill: white;
+    cursor: pointer;
 }
 
 .card-user-share-box {
     padding-left: 8em;
 }
 
-.card-user-share-box:hover {
-    cursor: pointer;
-    
-}
-
 .card-user-info {
     width: 50%;
 }
 
-
+/* Share pop-up box styling */
 #card-share-option {
     position: absolute;
-    top: 49%;
-    left: 67%;
+    top: 46%;
+    left: 66%;
     display:flex;
     flex-direction: row;
-    gap: 0.5em;
+    gap: 0.6em;
     background-color: var(--Very-Dark-Grayish-Blue);
-    padding: 1.2em;
+    padding: 1.6em;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -121,7 +135,7 @@ p {
 #card-share-option:after {
     content: '';
     position: absolute;
-    top: 3rem;
+    top: 4.2rem;
     border-top: 10px solid transparent;
     border-left: 10px solid transparent;
     border-bottom: 10px solid #48556a;
@@ -135,9 +149,71 @@ p {
   fill: white;
 }
 
+#card-share-option > p {
+    letter-spacing: 0.4em ;
+}
+
 #card-share-option > a:hover {
     fill: var(--Grayish-Blue);
 }
+
+.popup-share-icon {
+    display: none;
+}
+
+/* Responsive design */
+
+@media (max-width: 400px) {
+    
+    .card-container {
+        flex-direction: column;
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .card-header-picture {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-user-picture {
+        width: 20%;
+    }
+
+    .card-user-info > h2{
+        font-size: 1.4em;
+    }
+
+    .card-user-share-box {
+        padding-left: 2em;
+    }
+
+    #card-share-option {
+        position: inherit;    
+        border-radius: 0 0 20px 20px;  
+        gap: 1.2em;
+    }
+
+    #card-share-option > p {
+        font-size: 1.2em;
+    }
+
+
+    .popup-share-icon {
+        display:inline;
+        background-color: var(--Desaturated-Dark-Blue);
+        fill: var(--Light-Grayish-Blue);
+        border-color: var(--Desaturated-Dark-Blue);
+    }
+
+    .popup-share-icon:hover {
+        background-color: var(--Desaturated-Dark-Blue);
+        fill: var(--Light-Grayish-Blue);
+        border-color: var(--Desaturated-Dark-Blue);
+    }
+    
+}
+
+/* Footer styling */
 
 .attribution { 
     font-size: 11px; 
