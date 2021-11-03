@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- [Add solution URL here](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/article-preview-component-oNfCt8IyW)
 - [Live site URL](https://sypnotick.github.io/article-prev/)
 
 ## My process
