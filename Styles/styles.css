@@ -34,8 +34,7 @@ p {
 }
 
 body {
-    max-width: 1440px;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--Light-Grayish-Blue);
     display: flex;
     flex-direction: column;
@@ -163,7 +162,7 @@ body {
 
 /* Responsive design */
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     
     .card-container {
         flex-direction: column;
@@ -211,6 +210,17 @@ body {
         border-color: var(--Desaturated-Dark-Blue);
     }
     
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 /* Footer styling */

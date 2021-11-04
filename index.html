@@ -19,6 +19,7 @@
   <!-- Main Content -->
   <main class="card-container">
 
+    <h1 class="sr-only">Article preview  component</h1>
 
     <img class="card-header-picture" src="images/drawers.jpg" alt="Drawers with a vase and some picture on top of it">
 
@@ -37,7 +38,7 @@
       <!-- User information -->
       <div class="card-user" id="user-box">
 
-        <img class="card-user-picture" src="images/avatar-michelle.jpg" alt="woman smiling">
+        <img class="card-user-picture" src="images/avatar-michelle.jpg" alt="Michelle Appleton">
 
         <div class="card-user-info">
           <h2>
@@ -51,7 +52,7 @@
         <!-- Share pop-up box -->
         <div class="card-user-share-box">
           <!-- Share button -->
-          <button class="card-user-share">
+          <button class="card-user-share" aria-label="share to social media dropdown" aria-expanded="false">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15" 
@@ -71,7 +72,7 @@
      <!-- Share pop-up box -->
      <div id="card-share-option" style="display: none;">
       <p>SHARE</p>
-      <a href="#"> 
+      <a href="#" aria-label= "Facebook"> 
         <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -84,7 +85,7 @@
       </svg>
     </a>
 
-      <a href="#">
+      <a href="#" aria-label= "Twitter">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -97,7 +98,7 @@
          </svg>
      </a>
 
-      <a href="#">
+      <a href="#" aria-label= "Pinterest">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -111,7 +112,7 @@
       </a>
 
       <!-- Share button -->
-      <button class="card-user-share popup-share-icon">
+      <button class="card-user-share popup-share-icon" aria-label="share to social media dropdown" aria-expanded="false">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         width="15" 

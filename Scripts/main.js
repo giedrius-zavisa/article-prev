@@ -12,9 +12,11 @@ shareButton.forEach((el) =>
     if(shareBox.style.display === "none")
     {
         shareBox.style.display = "flex";
+        ariaExpand('true');
     }
     else {
         shareBox.style.display = "none";
+        ariaExpand('false');
     }
 
     if(viewportWidth <= 400) {
@@ -28,6 +30,12 @@ shareButton.forEach((el) =>
     }
   }) 
 );
+
+const ariaExpand = function(value) {
+
+    shareButton[0].setAttribute('aria-expanded', value);
+    shareButton[1].setAttribute('aria-expanded', value);
+}
 
 
 
